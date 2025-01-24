@@ -1,7 +1,7 @@
 FROM rust:1.73.0-bullseye as builder
 
 RUN apt-get update && \
-    apt-get install -y libopus-dev && \
+    apt-get install -y libopus-dev apt-utils && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /root/koe
