@@ -44,6 +44,8 @@ pub async fn build_read_text(
 }
 
 fn should_read_author_name(msg: &Message, last_msg: &Option<Message>) -> bool {
+    false
+    /*
     let last_msg = match last_msg {
         Some(msg) => msg,
         None => return true,
@@ -51,6 +53,7 @@ fn should_read_author_name(msg: &Message, last_msg: &Option<Message>) -> bool {
 
     msg.author != last_msg.author
         || (msg.timestamp.unix_timestamp() - last_msg.timestamp.unix_timestamp()) > 10
+    */
 }
 
 async fn build_author_name(ctx: &Context, msg: &Message) -> String {
